@@ -1,0 +1,51 @@
+1.  Inicio
+2.  funcion principal()
+3.  	opcion, i [0-n]
+4.      resultado, x(100)[{a-z},{A-Z},{0-9},{BS, :}]
+5.	base, d [0-n]
+6.	altura, d [0-n]
+
+7.	<< "Ingrese 1 si desea obtener el área de un cuadrado, 2 si desea obtener el área de un triángulo"y 3 si desea obtener el área de un rectángulo
+8. 	>> opcion
+9.	<< "Ingrese la base de su figura"
+10.	>> base
+11. 	<< "Ingrese la altura de su figura"
+12.	>> altura
+
+
+13.	Si opcion == 1 entonces
+14.		resultado <-- obtenerAreaCuadrado(base ; altura)
+15.	De lo contrario
+16.		Si opcion == 2 entonces
+17.			resultado <-- obtenerAreaTriangulo(base ; altura)
+18.		De lo contrario
+19.			Si opcion == 3 entonces
+20.				resultado <-- obtenerAreaRectangulo(base ; altura)
+21.			De lo contrario
+22.				resultado <-- "ERROR, no existe esa opción"
+23.			Fin Si
+24.		Fin Si
+25.	Fin Si
+
+26.	<< resultado	
+27. fin funcion principal()
+
+
+28. funcion obtenerAreaCuadrado(base,d ; altura,d) : x
+27. 	operacion, x(100)[{a-z},{A-Z},{0-9},{BS, :}]
+29.	operacion <-- "El resultado es: " + base * altura
+30.	retornar operacion
+31. fin funcion obtenerAreaCuadrado
+
+32. funcion obtenerAreaTriangulo(base,d ; altura,d) : x
+33. 	operacion, x(100)[{a-z},{A-Z},{0-9},{BS, :}]
+34.	operacion <-- "El resultado es: " + (base * altura)/2
+35.	retornar operacion
+36. fin obtenerAreaTriangulo
+
+37. funcion obtenerAreaRectangulo(base,d ; altura,d) : x
+38. 	operacion, x(100)[{a-z},{A-Z},{0-9},{BS, :}]
+39.	operacion <-- "El resultado es: " + base * altura
+40.	retornar operacion
+41. fin funcion obtenerAreaRectangulo
+42. Fin

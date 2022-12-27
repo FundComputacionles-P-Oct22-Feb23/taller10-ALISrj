@@ -1,0 +1,45 @@
+1.  Inicio
+2.  funcion principal()
+3.  	resultado, x(100)[{a-z},{A-Z},{0-9},{BS, :}]
+4.      nota1, d [0-10]
+5.	nota2, d [0-10]
+6.	nota3, d [0-10]
+7.	nota4, d [0-10]
+
+8.	<< "Ingrese la primera nota"
+9.	>> nota1
+8.	<< "Ingrese la segunda nota"
+9.	>> nota2
+8.	<< "Ingrese la tercera nota"
+9.	>> nota3
+8.	<< "Ingrese la cuarta nota"
+9.	>> nota4
+
+10.	resultado <-- promedioCualitativo (nota1; nota2; nota3; nota4)
+11.	<< resultado
+12. fin funcion principal
+
+13. funcion promedioCualitativo (nota1, d; nota2,d; nota3,d; nota4,d) : x
+14.	promedio, d [0-n]
+15.	mensaje, x(100)[{a-z},{A-Z},{0-9},{BS, :}]
+16.	clasificacion, x(100)[{a-z},{A-Z},{0-9},{BS, :}]
+
+17.	promedio <-- (nota1 + nota2 + nota3 + nota4)/4
+
+18.	Si promedio >= 0 AND promedio <= 5 entonces
+19.		clasificacion <-- "Regular"
+20.	De lo contrario 
+21.		Si promedio >= 5.1 AND promedio <= 8
+22.			clasificacion <-- "Bueno"
+23.		De lo contrario
+24.			Si promedio >= 8.1 AND promedio <= 9
+25.				clasificacion <-- "Muy Bueno"
+26.			De lo contrario
+27.				clasificacion <-- "Sobresaliente"
+28.			Fin Si
+29.		Fin Si
+30.	Fin Si
+31.	mensaje <-- "El promedio de las notas: " + nota1 + " " + nota2 + " " + nota3 + " " + nota4 + " es " + clasificacion
+32.	retornar mensaje
+33. fin funcion promedioCualitativo
+34. Fin
